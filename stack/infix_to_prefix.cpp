@@ -19,18 +19,14 @@ void infix_to_postfix(string s)
     for(int i=0;i<s.size();i++)
     {
         char c = s[i];
-        //if c is operand , add it to stack
         if(c>='A' && c<='Z' || c>='0'  && c <='9' || c>='a' && c<='z')
         {
             result = result+c;
         }
-        // if c=(, then add it to stack simply
         else if(c=='(')
         {
             st.push(c);
         }
-
-        //if c= ) , then empty the stack until , ( is obtained
         else if ( c==')')
         {
             while(st.top()!='(')
