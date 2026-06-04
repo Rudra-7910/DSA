@@ -12,9 +12,9 @@ class node
         left=right=NULL;
     }
 };
+int ans=0;
 int height ( node  * root)
 {
-    int ans=0;
     if(root==NULL)
     {
         return 0;
