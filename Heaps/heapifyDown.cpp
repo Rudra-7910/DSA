@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
-void maxHeapify(vector<int> & arr,int n, int i)
+vector<int>heap;
+void heapifyDown(vector<int> & arr,int n, int i)
 {
     while(true)
     {
@@ -26,6 +27,20 @@ void maxHeapify(vector<int> & arr,int n, int i)
         }
     }
 };
+int extractMax(){
+    if(heap.empty())
+    {
+        return -1;
+    }
+    int maxVal=heap[0];
+    heap[0]=heap.back();
+    heap.pop_back();
+    if(!heap.empty())
+    {
+        heapifyDown(heap,heap.size(),0);
+    }
+    return maxVal;
+}
 
 int main(){
     
