@@ -15,8 +15,8 @@ void markParents(node * root, unordered_map<node*,node*>& parent_track)
 {
     if(root==NULL)
     {
-        return ;
-    }
+        return ;            //remember , always use hashmap , to traverse back in tree to parents
+    }                           // burning tree, multiple traversal needed 
     queue<node*> q;
     q.push(root);
     while(!q.empty())
