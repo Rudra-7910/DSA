@@ -25,7 +25,7 @@ vector<int> frequencySort(vector<int> &nums)
         for(int i=0;i<f;i++)
         {
             result.push_back(val);
-        }
+        }   
     }
 }
 int main(){
